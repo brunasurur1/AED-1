@@ -1,3 +1,6 @@
+//Bruna Surur Bergara, RA: 165536
+//Exercício idade em dias do Exemplo de Torneio para entrega no dia 15/10
+
 #include <stdio.h>
  
 int main() 
