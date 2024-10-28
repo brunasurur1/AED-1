@@ -2,7 +2,8 @@
 //Exercício Beecrowd: Sudoku entregue no dia 28/10
 
 #include <stdio.h>
-#define TAM 9           // Define a constante TAM como 9, representando o tamanho da matriz 9x9
+//Define a constante TAM como 9, representando o tamanho da matriz 9x9
+#define TAM 9         
  
 int main() {
     int n;              // Declara a variável para armazenar o número de instâncias de Sudoku
