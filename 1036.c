@@ -1,3 +1,6 @@
+//Bruna Surur Bergara, RA: 165536
+//Exercício Beecrowd: Fórmula de Bhaskara feito em 05/11/2024, usado para relembrar teoria de LP
+
 #include <stdio.h>
 #include <stdlib.h>
 #include <math.h>
