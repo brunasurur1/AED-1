@@ -1,3 +1,6 @@
+//Bruna Surur Bergara, RA: 165536
+//Exercício Beecrowd: Operações em ABP I entregue em 22/05/2023
+
 #include <stdio.h>
 #include <string.h>
 #include <stdlib.h>
