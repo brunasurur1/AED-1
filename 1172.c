@@ -1,4 +1,5 @@
-
+//Bruna Surur Bergara, RA: 165536
+//Exercício Beecrowd: Substituição em Vetor I feito em 15/04/2023
 
 #include <stdio.h>
 #define MAX 10 /// Definindo a variável MAX em 10, temos o total de endereços
