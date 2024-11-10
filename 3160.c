@@ -1,4 +1,6 @@
-
+//Bruna Surur Bergara, RA: 165536
+//Exercício "Amigos" dado no torneio para entrega até dia 11/11/2024
+//Entregue 100% mas com "Presentation Error" no dia 10/11/2024
 
 #include <stdio.h>
 #include <stdlib.h>
