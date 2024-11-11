@@ -1,12 +1,13 @@
 //Bruna Surur Bergara, RA: 165536
 //Exercício "Amigos" dado no torneio para entrega até dia 11/11/2024
 //Entregue 100% mas com "Presentation Error" no dia 10/11/2024
+//Entregue com Accepted no dia 11/11/2024
 
-#include <stdio.h>
-#include <stdlib.h>
-#include <string.h>
+#include <stdio.h>     
+#include <stdlib.h>    
+#include <string.h>    
 
-// Estrutura chamada Celula que representará cada amigo na lista.
+// Definindo uma estrutura chamada Celula que representará cada amigo na lista.
 typedef struct Celula {
     char nome[20];          // Vetor de caracteres (string) para armazenar o nome do amigo, com até 20 caracteres.
     struct Celula *seg;     // Ponteiro para a próxima célula na lista, permitindo criar uma lista encadeada.
@@ -24,7 +25,7 @@ void insereNoFim(char nome[], Celula *lst) {
     Celula *nova = (Celula*)malloc(sizeof(Celula)); // Aloca memória para a nova célula a ser inserida.
     strcpy(nova->nome, nome);                       // Copia o nome do novo amigo para a célula nova.
     nova->seg = NULL;                               // Define o próximo elemento como NULL, pois será o último da lista.
-
+    
     Celula *p = lst;                                // Ponteiro temporário para percorrer a lista, começando pela cabeça.
     while (p->seg != NULL) {                        // Continua avançando enquanto houver próximos elementos.
         p = p->seg;                                 // Avança para a próxima célula.
@@ -45,12 +46,12 @@ Celula* busca(char nome[], Celula *lst) {
 void insereAntes(char nomeNovo[], char nomeExistente[], Celula *lst) {
     Celula *nova = (Celula*)malloc(sizeof(Celula)); // Aloca memória para a nova célula.
     strcpy(nova->nome, nomeNovo);                   // Copia o nome do novo amigo para a nova célula.
-
+    
     Celula *p = lst;                                // Ponteiro auxiliar, começando na célula cabeça.
     while (p->seg != NULL && strcmp(p->seg->nome, nomeExistente) != 0) { // Avança até encontrar o nomeExistente ou o fim da lista.
         p = p->seg;                                 // Avança para a próxima célula.
     }
-
+    
     nova->seg = p->seg;                             // Conecta o próximo da nova célula ao próximo de p.
     p->seg = nova;                                  // Conecta a nova célula antes da célula que contém nomeExistente.
 }
@@ -59,8 +60,9 @@ void insereAntes(char nomeNovo[], char nomeExistente[], Celula *lst) {
 void imprimeLista(Celula *lst) {
     Celula *p = lst->seg;                           // Ponteiro para começar na primeira célula após a cabeça.
     while (p != NULL) {                             // Continua enquanto houver elementos na lista.
-        printf("%s ", p->nome);                     // Imprime o nome do amigo seguido de um espaço.
+        printf("%s", p->nome);                      // Imprime o nome do amigo.
         p = p->seg;                                 // Avança para a próxima célula.
+        if (p != NULL) printf(" ");                 // Se não for o último item, imprime um espaço.
     }
     printf("\n");                                   // Quebra de linha após imprimir toda a lista.
 }
@@ -68,24 +70,24 @@ void imprimeLista(Celula *lst) {
 // Função principal que executa a lógica do programa.
 int main() {
     Celula *lista = inicializa();                   // Cria e inicializa a lista com uma célula cabeça.
-
+    
     char nomesIniciais[100], novosNomes[100], amigoIndicado[20]; // Variáveis para armazenar as entradas.
-
+    
     fgets(nomesIniciais, 100, stdin);               // Lê a lista inicial de amigos como uma linha completa.
     nomesIniciais[strcspn(nomesIniciais, "\n")] = '\0'; // Remove o caractere de nova linha.
-
+    
     fgets(novosNomes, 100, stdin);                  // Lê a nova lista de amigos.
     novosNomes[strcspn(novosNomes, "\n")] = '\0';   // Remove o caractere de nova linha.
-
+    
     fgets(amigoIndicado, 20, stdin);                // Lê o nome do amigo indicado ou "nao".
     amigoIndicado[strcspn(amigoIndicado, "\n")] = '\0'; // Remove o caractere de nova linha.
-
+    
     char *token = strtok(nomesIniciais, " ");       // Separa a lista inicial em nomes individuais.
     while (token != NULL) {                         // Continua enquanto houver nomes na lista inicial.
         insereNoFim(token, lista);                  // Insere cada nome no final da lista.
         token = strtok(NULL, " ");                  // Avança para o próximo nome.
     }
-
+    
     token = strtok(novosNomes, " ");                // Separa a nova lista em nomes individuais.
     while (token != NULL) {                         // Continua enquanto houver nomes na nova lista.
         if (strcmp(amigoIndicado, "nao") == 0) {    // Se a indicação é "nao", insere no fim.
@@ -102,6 +104,6 @@ int main() {
     }
 
     imprimeLista(lista);                            // Chama a função para imprimir a lista.
-
+    
     return 0;                                       // Fim do programa com código de retorno 0.
 }
