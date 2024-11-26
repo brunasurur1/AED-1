@@ -1,3 +1,7 @@
+//Bruna Surur Bergara, RA: 165536
+//Exercício "Lista de Chamada" dado para entrega até dia 26/11/2024
+//Entregue no dia 26/11/2024
+
 #include <stdio.h>
 #include <string.h>
 
