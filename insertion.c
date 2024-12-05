@@ -1,3 +1,7 @@
+//Bruna Surur Bergara, RA: 165536
+//Exercício "Comparação de Algoritmos - Parte 1" para entrega até dia 04/12/2024
+// Código para InsertionSort
+
 #include <stdio.h>
 
 // Function to perform Insertion Sort
