@@ -1,4 +1,5 @@
-
+///Bruna Surur Bergara, RA: 165536
+///Exercício Cédulas feito em 07/12 para relembrar LP
 
 #include <stdio.h>
 #include <stdlib.h>
