@@ -1,3 +1,6 @@
+//Bruna Surur Bergara, RA: 165536
+//Exercício "Comparação de Algoritmos - Parte 2" para entrega até dia 11/12/2024
+// Código para QuickSort
 
 #include <stdio.h>
 
