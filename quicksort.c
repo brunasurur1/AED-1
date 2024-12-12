@@ -2,62 +2,64 @@
 //Exercício "Comparação de Algoritmos - Parte 2" para entrega até dia 11/12/2024
 // Código para QuickSort
 
+
 #include <stdio.h>
 
-// Função para trocar dois elementos
-template <typename T>
-void swap(T* a, T* b) {
-    T temp = *a;
+// Função para trocar dois elementos em um array
+void swap(int* a, int* b) {
+    int t = *a;
     *a = *b;
-    *b = temp;
+    *b = t;
 }
 
-// Função para realizar a partição do array
-int partition(int arr[], int low, int high) {
-    int pivot = arr[high]; // Pivô
+// Função de partição: escolhe um pivô e reorganiza o array
+int partition(int array[], int low, int high) {
+    // Escolhe o último elemento como pivô (pode ser qualquer outro)
+    int pivot = array[high];
     int i = (low - 1); // Índice do menor elemento
 
-    for (int j = low; j < high; j++) {
-        // Se o elemento atual for menor ou igual ao pivô
-        if (arr[j] <= pivot) {
+    for (int j = low; j <= high - 1; j++) {
+        // Se o elemento atual é menor ou igual ao pivô
+        if (array[j] <= pivot) {
             i++; // Incrementa o índice do menor elemento
-            swap(&arr[i], &arr[j]);
+            swap(&array[i], &array[j]);
         }
     }
-    swap(&arr[i + 1], &arr[high]);
+    swap(&array[i + 1], &array[high]);
     return (i + 1);
 }
 
-// Função para realizar o Quick Sort
-void quickSort(int arr[], int low, int high) {
+// Função de ordenação Quick Sort
+void quickSort(int array[], int low, int high) {
     if (low < high) {
-        int pi = partition(arr, low, high); // Índice da partição
+        // pi é o índice de partição, array[p] está no lugar correto
+        int pi = partition(array, low, high);
 
-        // Ordena os elementos antes e depois da partição
-        quickSort(arr, low, pi - 1);
-        quickSort(arr, pi + 1, high);
+        // Ordena recursivamente os sub-arrays antes e depois da partição
+        quickSort(array, low, pi - 1);
+        quickSort(array, pi + 1, high);
     }
 }
 
 // Função para imprimir o array
-void printar(int arr[], int size) {
-    for (int i = 0; i < size; i++) {
-        printf("%d ", arr[i]);
+void printArray(int array[], int size) {
+    for (int i = 0; i < size; ++i) {
+        printf("%d  ", array[i]);
     }
     printf("\n");
 }
 
+// Programa principal
 int main() {
-    int arr[] = {52531, 98584, 94234, 27104, 52401, 54009, 17653, 13865, 23508, 60192};
-    int n = sizeof(arr) / sizeof(arr[0]);
+    int data[] = {52531, 98584, 94234, 27104, 52401, 54009, 17653, 13865, 23508, 60192};
+    int n = sizeof(data) / sizeof(data[0]);
+    printf("Array não ordenado: \n");
+    printArray(data, n);
 
-    printf("Array original:\n");
-    printar(arr, n);
+    // Chamada da função de ordenação Quick Sort
+    quickSort(data, 0, n - 1);
 
-    quickSort(arr, 0, n - 1);
-
-    printf("\nArray ordenado:\n");
-    printar(arr, n);
-
+    printf("Array ordenado: \n");
+    printArray(data, n);
     return 0;
 }
