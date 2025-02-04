@@ -1,5 +1,6 @@
 //Bruna Surur Bergara, RA: 165536
-//Exercício feito para estudo em 04/02
+//Exercício feito para estudo
+//Exercício Beecrowd: Sequência de números e soma feito em 04/02
 
 #include <stdio.h>
 
