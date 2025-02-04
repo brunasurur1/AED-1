@@ -1,3 +1,6 @@
+//Bruna Surur Bergara, RA: 165536
+//Exercício Beecrowd: Entradas Escuras entregue em 28/01/2025 e dado em torneio
+
 #include <stdio.h>
 #include <stdlib.h>
 
