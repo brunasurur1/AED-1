@@ -1,3 +1,6 @@
+//Bruna Surur Bergara, RA: 165536
+//Exercício feito para estudo em 04/02
+
 #include <stdio.h>
 
 int main() {
