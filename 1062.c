@@ -5,11 +5,11 @@
 #include <stdio.h>
 #include <stdlib.h>
 
-#define MAX_VAGOES 1000 // Define o número máximo de vagões
+#define vagoes 1000 // Define o número máximo de vagões
 
 // Função para verificar se a sequência de saída é possível
 int verificar_reorganizacao(int n, int ordem_vagoes[]) {
-    int pilha[MAX_VAGOES], indice_topo = -1, prox_vagao = 1; // Inicializa a pilha, topo e o próximo vagão esperado
+    int pilha[vagoes], indice_topo = -1, prox_vagao = 1; // Inicializa a pilha, topo e o próximo vagão esperado
     
     for (int i = 0; i < n; i++) { // Percorre a sequência de saída desejada
         while (prox_vagao <= ordem_vagoes[i]) { // Empilha os vagões até alcançar o desejado
@@ -27,7 +27,7 @@ int verificar_reorganizacao(int n, int ordem_vagoes[]) {
 int main() {
     int n; // Número de vagões
     while (scanf("%d", &n) && n != 0) { // Lê o número de vagões até encontrar um 0
-        int ordem_vagoes[MAX_VAGOES]; // Vetor para armazenar a ordem desejada
+        int ordem_vagoes[vagoes]; // Vetor para armazenar a ordem desejada
         while (scanf("%d", &ordem_vagoes[0]) && ordem_vagoes[0] != 0) { // Lê a primeira entrada da sequência até encontrar 0
             for (int i = 1; i < n; i++) { // Lê os demais elementos da sequência
                 scanf("%d", &ordem_vagoes[i]);
@@ -37,5 +37,5 @@ int main() {
         }
         printf("\n"); // Linha em branco após cada bloco
     }
-    return 0; // Retorna 0 para indicar que o programa terminou corretamente
+    return 0; 
 }
