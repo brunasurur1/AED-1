@@ -1,7 +1,11 @@
+//Bruna Surur Bergara, RA: 165536
+//Exercício feito para estudo
+//Exercício Beecrowd: Diamantes e Areia, feito em 04/02
+
 #include <stdio.h>
 #include <string.h>
 
-#define MAX_TAMANHO 1000
+#define caract 1000
 
 // Função que conta quantos diamantes podem ser extraídos
 int contar_diamantes(const char *linha) {
@@ -20,7 +24,7 @@ int contar_diamantes(const char *linha) {
 
 int main() {
     int N; // Número de casos de teste
-    char linha[MAX_TAMANHO + 1];
+    char linha[caract + 1];
     
     // Lendo o número de casos de teste
     scanf("%d", &N);
