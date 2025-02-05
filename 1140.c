@@ -1,3 +1,6 @@
+//Bruna Surur Bergara, RA: 165536
+//Exercício Beecrowd: Flores Florescem da França feito em 04/02/25 para estudo
+
 #include <stdio.h>
 #include <string.h>
 #include <ctype.h>  // Para usar a função tolower()
