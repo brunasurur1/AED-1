@@ -1,4 +1,6 @@
-
+//Bruna Surur Bergara, RA: 165536
+//Exercício feito para estudo
+//Exercício Beecrowd: Jogando Cartas Fora, feito em 05/02
 
 #include <stdio.h>
 #include <stdlib.h>
