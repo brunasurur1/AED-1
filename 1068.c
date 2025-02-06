@@ -1,4 +1,6 @@
-
+//Bruna Surur Bergara, RA: 165536
+//Exercício feito para estudo
+//Exercício Beecrowd: Balanço de Parênteses, pedido no torneio Filas e Pilhas
 
 #include <stdio.h>
 #include <string.h>
