@@ -1,6 +1,6 @@
 //Bruna Surur Bergara, RA: 165536
 //Exercício feito para estudo
-//Exercício Beecrowd: Diamantes e Areia, feito em 04/02
+//Exercício Beecrowd: Diamantes e Areia, pedido no torneio Filas e Pilhas
 
 #include <stdio.h>
 #include <string.h>
