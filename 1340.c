@@ -1,6 +1,6 @@
 //Bruna Surur Bergara, RA: 165536
 //Exercício feito para estudo
-//Exercício Beecrowd: Eu posso adivinhar a Estrutura de Dados!, 
+//Exercício Beecrowd: Eu posso adivinhar a Estrutura de Dados!, pedido no torneio Filas e Pilhas
 
 #include <stdio.h>
 #include <stdlib.h>
