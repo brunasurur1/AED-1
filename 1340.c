@@ -1,4 +1,6 @@
-
+//Bruna Surur Bergara, RA: 165536
+//Exercício feito para estudo
+//Exercício Beecrowd: Eu posso adivinhar a Estrutura de Dados!, 
 
 #include <stdio.h>
 #include <stdlib.h>
