@@ -1,4 +1,6 @@
-
+//Bruna Surur Bergara, RA: 165536
+//Exercício feito para estudo
+//Exercício Beecrowd: Árvore Binária de Busca, pedido no torneio ÁRVORES
 
 #include <stdio.h>
 #include <stdlib.h>
