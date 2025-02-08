@@ -1,7 +1,9 @@
+//Bruna Surur Bergara, RA: 165536
+//Exercício feito para estudo
+//Exercício Beecrowd: Balanço de Parênteses, pedido no torneio Filas e Pilhas
 
-
-#include <stdio.h> // Biblioteca para entrada e saída de dados
-#include <stdlib.h> // Biblioteca para funções auxiliares, incluindo qsort
+#include <stdio.h> 
+#include <stdlib.h> 
 
 #define MAX_ALUNOS 1000 // Define o número máximo de alunos permitido
 
