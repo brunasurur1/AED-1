@@ -1,3 +1,6 @@
+//Bruna Surur Bergara, RA: 165536
+//Exercício feito para estudo
+//Exercício Beecrowd: Polícia e Ladrão feito em 12/02 para estudo
 
 #include <stdio.h>
 #include <stdbool.h>
